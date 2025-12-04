@@ -211,7 +211,18 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Leadminthub. All rights reserved.</p>
+            <script>
+                // Dynamically set the current year
+                document.addEventListener("DOMContentLoaded", function() {
+                    const footer = document.querySelector('.footer .container');
+                    if (footer) {
+                        const yearPara = footer.querySelector('p');
+                        if (yearPara) {
+                            yearPara.innerHTML = `&copy; ${new Date().getFullYear()} Leadminthub. All rights reserved.`;
+                        }
+                    }
+                });
+            </script>
         </div>
     </footer>
 
