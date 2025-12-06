@@ -55,6 +55,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <!-- Google Analytics 4 -->
     <!-- Replace G-XXXXXXXXXX with your actual Google Analytics 4 Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHTN2XLWBL"></script>
@@ -385,6 +388,15 @@
     </div>
 
     <script src="script.js"></script>
+    
+    <!-- Initialize EmailJS -->
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key after signing up
+        (function(){
+            emailjs.init("s8Qjjyk1uYiGghLXh"); // You'll need to replace this with your actual EmailJS public key
+        })();
+    </script>
 
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">

@@ -293,7 +293,7 @@
     }
     
     // ============================================
-    // Form Submission Handler
+    // Form Submission Handler with EmailJS
     // ============================================
     
     const contactForm = document.getElementById('contactForm');
@@ -301,38 +301,79 @@
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
             
             // Simple validation
-            if (name && email && message) {
-                // Show loading state
-                const submitButton = contactForm.querySelector('.mdc-button');
-                const originalLabel = submitButton.querySelector('.mdc-button__label').textContent;
-                submitButton.querySelector('.mdc-button__label').textContent = 'Sending...';
-                submitButton.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    showSnackbar('Thank you for your message! We will get back to you within 24 hours.');
-                    contactForm.reset();
-                    
-                    // Reset text field labels
-                    const textFields = contactForm.querySelectorAll('.mdc-text-field__input, .form-input');
-                    textFields.forEach(field => {
-                        field.classList.remove('has-value');
-                        if (field.parentElement.classList.contains('mdc-text-field')) {
-                            field.parentElement.classList.remove('mdc-text-field--focused');
-                        }
-                    });
-                    
-                    // Reset button
-                    submitButton.querySelector('.mdc-button__label').textContent = originalLabel;
-                    submitButton.disabled = false;
-                }, 1500);
-            } else {
+            if (!name || !email || !message) {
                 showSnackbar('Please fill in all fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showSnackbar('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show loading state
+            const submitButton = contactForm.querySelector('.mdc-button');
+            const originalLabel = submitButton.querySelector('.mdc-button__label').textContent;
+            submitButton.querySelector('.mdc-button__label').textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // EmailJS configuration
+            // Replace these with your actual EmailJS service ID, template ID, and public key
+            const serviceID = 'service_6nzp11n'; // Your EmailJS service ID
+            const templateID = 'template_in32eq8'; // Your EmailJS template ID
+            
+            // Prepare email parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'appointmentleadsminthub@gmail.com', // Your receiving email
+                reply_to: email
+            };
+            
+            // Send email using EmailJS
+            if (typeof emailjs !== 'undefined') {
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        showSnackbar('Thank you for your message! We will get back to you within 24 hours.');
+                        contactForm.reset();
+                        
+                        // Reset text field labels
+                        const textFields = contactForm.querySelectorAll('.mdc-text-field__input, .form-input');
+                        textFields.forEach(field => {
+                            field.classList.remove('has-value');
+                            if (field.parentElement.classList.contains('mdc-text-field')) {
+                                field.parentElement.classList.remove('mdc-text-field--focused');
+                            }
+                        });
+                        
+                        // Reset button
+                        submitButton.querySelector('.mdc-button__label').textContent = originalLabel;
+                        submitButton.disabled = false;
+                    }, function(error) {
+                        console.error('FAILED...', error);
+                        showSnackbar('Sorry, there was an error sending your message. Please try again later or contact us directly.');
+                        
+                        // Reset button
+                        submitButton.querySelector('.mdc-button__label').textContent = originalLabel;
+                        submitButton.disabled = false;
+                    });
+            } else {
+                // Fallback if EmailJS is not loaded
+                console.error('EmailJS is not loaded. Please check your EmailJS configuration.');
+                showSnackbar('Email service is not configured. Please contact us directly at appointmentleadsminthub@gmail.com');
+                
+                // Reset button
+                submitButton.querySelector('.mdc-button__label').textContent = originalLabel;
+                submitButton.disabled = false;
             }
         });
     }
