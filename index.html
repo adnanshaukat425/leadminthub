@@ -3,31 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leadminthub - High-Quality Lead Generation Services</title>
-    <meta name="description" content="Transform your business with proven lead generation strategies. Get qualified leads that convert into customers.">
+    
+    <!-- Primary Meta Tags -->
+    <title>Lead Generation Services & Company | Leadminthub - US & Karachi</title>
+    <meta name="title" content="Lead Generation Services & Company | Leadminthub - US & Karachi">
+    <meta name="description" content="Professional lead generation services company providing high-quality qualified leads for businesses in the US and Karachi, Pakistan. Expert paid campaign management, conversion optimization, and ROI-driven lead generation strategies.">
+    <meta name="keywords" content="lead generation services, lead generation company, lead generation agency, qualified leads, lead generation for business, lead generation services Karachi, lead generation company Pakistan, B2B lead generation, digital marketing leads, paid campaign management">
+    <meta name="author" content="Leadminthub">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US-PK">
+    <meta name="geo.placename" content="United States, Karachi">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.leadminthub.com/">
+    
+    <!-- Language and Region Tags -->
+    <link rel="alternate" hreflang="en" href="https://www.leadminthub.com/">
+    <link rel="alternate" hreflang="en-US" href="https://www.leadminthub.com/">
+    <link rel="alternate" hreflang="en-PK" href="https://www.leadminthub.com/">
+    <link rel="alternate" hreflang="x-default" href="https://www.leadminthub.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.leadminthub.com/">
+    <meta property="og:title" content="Lead Generation Services & Company | Leadminthub - US & Karachi">
+    <meta property="og:description" content="Professional lead generation services company providing high-quality qualified leads for businesses in the US and Karachi, Pakistan. Expert paid campaign management and conversion optimization.">
+    <meta property="og:image" content="https://www.leadminthub.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Leadminthub">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_PK">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.leadminthub.com/">
+    <meta name="twitter:title" content="Lead Generation Services & Company | Leadminthub">
+    <meta name="twitter:description" content="Professional lead generation services providing high-quality qualified leads for businesses in the US and Karachi, Pakistan.">
+    <meta name="twitter:image" content="https://www.leadminthub.com/assets/images/twitter-card.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1959d1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=yes">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Analytics 4 -->
+    <!-- Replace G-XXXXXXXXXX with your actual Google Analytics 4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHTN2XLWBL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BHTN2XLWBL', {
+        'page_title': document.title,
+        'page_location': window.location.href
+      });
+      
+      // Track form submissions
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+          contactForm.addEventListener('submit', function() {
+            gtag('event', 'form_submission', {
+              'event_category': 'Contact',
+              'event_label': 'Contact Form',
+              'value': 1
+            });
+          });
+        }
+      });
+    </script>
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#home" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
+    
     <!-- Header with Navigation -->
-    <header class="header" id="header">
+    <header class="header" id="header" role="banner">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="#home">Leadminthub</a>
+                    <a href="#home" aria-label="Leadminthub - Lead Generation Services Home">Leadminthub</a>
                 </div>
-                <nav class="nav" id="nav">
+                <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#home" class="nav-link" aria-label="Go to home section">Home</a></li>
+                        <li><a href="#services" class="nav-link" aria-label="Go to services section">Services</a></li>
+                        <li><a href="#testimonials" class="nav-link" aria-label="Go to reviews section">Reviews</a></li>
+                        <li><a href="#faq" class="nav-link" aria-label="Go to FAQ section">FAQ</a></li>
+                        <li><a href="#contact" class="nav-link" aria-label="Go to contact section">Contact</a></li>
                     </ul>
                 </nav>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -40,16 +115,16 @@
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" role="region" aria-label="Hero section">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Turn Your Marketing Budget Into a Revenue-Generating Machine</h1>
-                <p class="hero-subtitle">We specialize in delivering high-intent leads that convert. Our data-driven approach ensures every dollar you invest generates measurable ROI, filling your pipeline with qualified prospects ready to buy.</p>
-                <a href="#contact" class="mdc-button mdc-button--raised" data-ripple>
+            <article class="hero-content">
+                <h1 class="hero-title">Professional Lead Generation Services for US & Karachi Businesses</h1>
+                <p class="hero-subtitle">As a leading lead generation company, we specialize in delivering high-intent qualified leads that convert. Our data-driven lead generation services ensure every dollar you invest generates measurable ROI, filling your pipeline with qualified prospects ready to buy. Serving businesses across the United States and Karachi, Pakistan.</p>
+                <a href="#contact" class="mdc-button mdc-button--raised" data-ripple aria-label="Get started with our lead generation services">
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">Get Started Today</span>
                 </a>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -57,32 +132,34 @@
     <div class="mdc-divider"></div>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services" id="services" role="region" aria-label="Lead generation services">
         <div class="container">
-            <h2 class="section-title">Our Lead Generation Services</h2>
-            <p class="section-subtitle">Comprehensive solutions designed to scale your business and maximize your marketing ROI</p>
-            <div class="services-grid">
-                <div class="service-card mdc-card elevation-2" data-ripple>
-                    <div class="service-icon">
+            <header>
+                <h2 class="section-title">Our Lead Generation Services</h2>
+                <p class="section-subtitle">Comprehensive lead generation solutions designed to scale your business and maximize your marketing ROI. Our lead generation agency serves businesses in the United States and Karachi, Pakistan with proven strategies that deliver qualified leads.</p>
+            </header>
+            <div class="services-grid" role="list">
+                <article class="service-card mdc-card elevation-2" data-ripple role="listitem">
+                    <div class="service-icon" aria-hidden="true">
                         <span class="material-icons">trending_up</span>
                     </div>
                     <h3 class="service-title">High-Intent Lead Generation</h3>
-                    <p class="service-description">Target prospects actively searching for your solutions. We use advanced targeting and behavioral data to identify and capture leads with the highest purchase intent, ensuring maximum conversion rates.</p>
-                </div>
-                <div class="service-card mdc-card elevation-2" data-ripple>
-                    <div class="service-icon">
+                    <p class="service-description">Target prospects actively searching for your solutions. Our lead generation services use advanced targeting and behavioral data to identify and capture qualified leads with the highest purchase intent, ensuring maximum conversion rates for your business.</p>
+                </article>
+                <article class="service-card mdc-card elevation-2" data-ripple role="listitem">
+                    <div class="service-icon" aria-hidden="true">
                         <span class="material-icons">campaign</span>
                     </div>
                     <h3 class="service-title">Paid Campaign Management</h3>
-                    <p class="service-description">Expert management of your Google Ads, Facebook, and LinkedIn campaigns. We optimize every aspect from keyword selection to ad copy, continuously improving performance to lower your cost per lead.</p>
-                </div>
-                <div class="service-card mdc-card elevation-2" data-ripple>
-                    <div class="service-icon">
+                    <p class="service-description">Expert management of your Google Ads, Facebook, and LinkedIn campaigns. Our lead generation company optimizes every aspect from keyword selection to ad copy, continuously improving performance to lower your cost per lead and maximize qualified lead generation.</p>
+                </article>
+                <article class="service-card mdc-card elevation-2" data-ripple role="listitem">
+                    <div class="service-icon" aria-hidden="true">
                         <span class="material-icons">analytics</span>
                     </div>
                     <h3 class="service-title">Conversion Funnel Optimization</h3>
-                    <p class="service-description">Transform visitors into customers with strategically designed funnels. We analyze user behavior, test landing pages, and refine the entire customer journey to maximize conversions at every touchpoint.</p>
-                </div>
+                    <p class="service-description">Transform visitors into customers with strategically designed funnels. Our lead generation agency analyzes user behavior, tests landing pages, and refines the entire customer journey to maximize conversions at every touchpoint, turning more leads into sales.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -91,55 +168,116 @@
     <div class="mdc-divider"></div>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials" role="region" aria-label="Client testimonials and reviews">
         <div class="container">
-            <h2 class="section-title">Trusted by Businesses Worldwide</h2>
-            <p class="section-subtitle">See how we've helped companies like yours achieve remarkable growth</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
+            <header>
+                <h2 class="section-title">Trusted by Businesses Worldwide</h2>
+                <p class="section-subtitle">See how we've helped companies like yours achieve remarkable growth</p>
+            </header>
+            <div class="testimonials-grid" role="list">
+                <article class="testimonial-card" role="listitem">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
                     </div>
-                    <p class="testimonial-text">"Leadminthub transformed our lead generation. We went from struggling to fill our pipeline to having qualified leads coming in daily. Our sales team is now closing deals we never would have reached before."</p>
-                    <p class="testimonial-author">— Sarah Mitchell, CEO at TechFlow Solutions</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
+                    <blockquote class="testimonial-text" cite="#testimonials">
+                        "Leadminthub transformed our lead generation. We went from struggling to fill our pipeline to having qualified leads coming in daily. Our sales team is now closing deals we never would have reached before."
+                    </blockquote>
+                    <cite class="testimonial-author">— Sarah Mitchell, CEO at TechFlow Solutions</cite>
+                </article>
+                <article class="testimonial-card" role="listitem">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
                     </div>
-                    <p class="testimonial-text">"The ROI has been incredible. Within three months, our cost per acquisition dropped by 40% while lead volume increased. Leadminthub's expertise in paid campaigns is unmatched."</p>
-                    <p class="testimonial-author">— James Rodriguez, Marketing Director at Growth Partners</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
+                    <blockquote class="testimonial-text" cite="#testimonials">
+                        "The ROI has been incredible. Within three months, our cost per acquisition dropped by 40% while lead volume increased. Leadminthub's expertise in paid campaigns is unmatched."
+                    </blockquote>
+                    <cite class="testimonial-author">— James Rodriguez, Marketing Director at Growth Partners</cite>
+                </article>
+                <article class="testimonial-card" role="listitem">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
                     </div>
-                    <p class="testimonial-text">"Working with Leadminthub was a game-changer. Their funnel optimization strategies helped us convert 3x more visitors into paying customers. Highly recommend their services."</p>
-                    <p class="testimonial-author">— Emily Chen, Founder at Digital Innovations</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
-                        <span class="material-icons">star</span>
+                    <blockquote class="testimonial-text" cite="#testimonials">
+                        "Working with Leadminthub was a game-changer. Their funnel optimization strategies helped us convert 3x more visitors into paying customers. Highly recommend their services."
+                    </blockquote>
+                    <cite class="testimonial-author">— Emily Chen, Founder at Digital Innovations</cite>
+                </article>
+                <article class="testimonial-card" role="listitem">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
+                        <span class="material-icons" aria-hidden="true">star</span>
                     </div>
-                    <p class="testimonial-text">"Professional, results-driven, and always transparent. Leadminthub doesn't just generate leads—they generate the right leads. Our sales cycle shortened significantly after partnering with them."</p>
-                    <p class="testimonial-author">— Michael Thompson, VP of Sales at Enterprise Solutions Inc.</p>
-                </div>
+                    <blockquote class="testimonial-text" cite="#testimonials">
+                        "Professional, results-driven, and always transparent. Leadminthub doesn't just generate leads—they generate the right leads. Our sales cycle shortened significantly after partnering with them."
+                    </blockquote>
+                    <cite class="testimonial-author">— Michael Thompson, VP of Sales at Enterprise Solutions Inc.</cite>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Divider -->
+    <div class="mdc-divider"></div>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq" role="region" aria-label="Frequently asked questions">
+        <div class="container">
+            <header>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our lead generation services</p>
+            </header>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <h3 class="faq-question">What are lead generation services?</h3>
+                    <div class="faq-answer">
+                        <p>Lead generation services help businesses identify and attract potential customers who are interested in their products or services. As a lead generation company, we use various strategies including paid advertising, content marketing, and data-driven targeting to find qualified leads that are most likely to convert into customers.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <h3 class="faq-question">How does your lead generation company find qualified leads?</h3>
+                    <div class="faq-answer">
+                        <p>Our lead generation agency uses advanced targeting techniques, behavioral data analysis, and multi-channel marketing strategies to identify prospects with high purchase intent. We leverage Google Ads, Facebook, LinkedIn, and other platforms to reach your target audience in the US and Karachi, Pakistan, ensuring we deliver qualified leads that match your ideal customer profile.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <h3 class="faq-question">What industries do you serve with your lead generation services?</h3>
+                    <div class="faq-answer">
+                        <p>Our lead generation company works with businesses across various industries including technology, healthcare, finance, real estate, professional services, and B2B companies. We customize our lead generation strategies to match your specific industry needs and target market, whether you're operating in the United States or Karachi, Pakistan.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <h3 class="faq-question">How quickly will I see results from your lead generation services?</h3>
+                    <div class="faq-answer">
+                        <p>Most clients begin seeing qualified leads within 2-4 weeks of launching our lead generation campaigns. However, results vary based on your industry, target market, and campaign budget. Our lead generation agency provides transparent reporting so you can track progress and ROI in real-time.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <h3 class="faq-question">Do you provide lead generation services in Karachi, Pakistan?</h3>
+                    <div class="faq-answer">
+                        <p>Yes! Our lead generation company serves businesses in Karachi, Pakistan, as well as throughout the United States. We understand the local market dynamics in Karachi and can tailor our lead generation strategies to effectively reach your target audience in Pakistan while also supporting your US market expansion.</p>
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <h3 class="faq-question">What makes your lead generation agency different from others?</h3>
+                    <div class="faq-answer">
+                        <p>Our lead generation company focuses on quality over quantity. We don't just generate leads—we generate qualified leads that are ready to buy. With our data-driven approach, conversion funnel optimization, and continuous campaign management, we ensure every lead has the highest potential to convert, maximizing your ROI and reducing your cost per acquisition.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -148,20 +286,20 @@
     <div class="mdc-divider"></div>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" role="region" aria-label="Contact information and form">
         <div class="container">
             <div class="contact-header">
-                <div class="contact-header-content">
+                <header class="contact-header-content">
                     <h2 class="contact-title">Contact</h2>
                     <p class="contact-tagline">Let's talk about your next big move.</p>
-                </div>
+                </header>
                 <div class="contact-social-links">
                     <a href="https://www.linkedin.com/in/lead-mint-hub-581371253" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn" data-ripple>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
                     </a>
-                    <a href="#" class="contact-social-link" aria-label="Facebook" title="Coming soon" data-ripple>
+                    <a href="https://www.facebook.com/profile.php?id=61584341475983" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="Facebook" data-ripple>
                         <span class="material-icons">facebook</span>
                     </a>
                 </div>
@@ -170,20 +308,20 @@
                 <h3 class="contact-form-title">Send us a message</h3>
                 <p class="contact-form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" aria-label="Contact form">
                         <div class="form-field">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required aria-required="true" autocomplete="name">
                         </div>
                         <div class="form-field">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required aria-required="true" autocomplete="email">
                         </div>
                         <div class="form-field">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Enter your message" required></textarea>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Enter your message" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="mdc-button mdc-button--raised" data-ripple>
+                        <button type="submit" class="mdc-button mdc-button--raised" data-ripple aria-label="Submit contact form">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">SEND MESSAGE</span>
                         </button>
@@ -194,30 +332,30 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-cards">
+                <address class="footer-contact-cards">
                     <div class="footer-contact-card">
-                        <div class="footer-contact-icon">
+                        <div class="footer-contact-icon" aria-hidden="true">
                             <span class="material-icons">phone</span>
                         </div>
                         <div class="footer-contact-info">
                             <h4 class="footer-contact-title">Phone</h4>
-                            <a href="tel:+13160028288" class="footer-contact-link">+1 (316) 002-8288</a>
+                            <a href="tel:+923160028288" class="footer-contact-link" aria-label="Call us at +92 (316) 002-8288">+92 (316) 002-8288</a>
                         </div>
                     </div>
                     <div class="footer-contact-card">
-                        <div class="footer-contact-icon">
+                        <div class="footer-contact-icon" aria-hidden="true">
                             <span class="material-icons">email</span>
                         </div>
                         <div class="footer-contact-info">
                             <h4 class="footer-contact-title">Email</h4>
-                            <a href="mailto:appointmentleadsminthub@gmail.com" class="footer-contact-link">appointmentleadsminthub@gmail.com</a>
+                            <a href="mailto:appointmentleadsminthub@gmail.com" class="footer-contact-link" aria-label="Email us at appointmentleadsminthub@gmail.com">appointmentleadsminthub@gmail.com</a>
                         </div>
                     </div>
                     <div class="footer-contact-card">
-                        <div class="footer-contact-icon">
+                        <div class="footer-contact-icon" aria-hidden="true">
                             <span class="material-icons">schedule</span>
                         </div>
                         <div class="footer-contact-info">
@@ -225,7 +363,7 @@
                             <p class="footer-contact-text">Mon-Fri, 9am-6pm</p>
                         </div>
                     </div>
-                </div>
+                </address>
                 <div class="footer-bottom">
                     <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script> Leadminthub. All rights reserved.</p>
                 </div>
@@ -234,10 +372,10 @@
     </footer>
 
     <!-- Floating Action Button -->
-    <button class="mdc-fab" aria-label="Contact" data-ripple onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+    <!-- <button class="mdc-fab" aria-label="Contact" data-ripple onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
         <span class="mdc-fab__ripple"></span>
         <span class="material-icons mdc-fab__icon">mail</span>
-    </button>
+    </button> -->
 
     <!-- Snackbar for form feedback -->
     <div class="mdc-snackbar" id="snackbar">
@@ -247,6 +385,269 @@
     </div>
 
     <script src="script.js"></script>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Leadminthub",
+      "url": "https://www.leadminthub.com",
+      "logo": "https://www.leadminthub.com/assets/images/logo.png",
+      "description": "Professional lead generation services company providing high-quality qualified leads for businesses in the US and Karachi, Pakistan.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-316-002-8288",
+        "contactType": "Customer Service",
+        "email": "appointmentleadsminthub@gmail.com",
+        "availableLanguage": ["English"],
+        "areaServed": ["US", "PK"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/lead-mint-hub-581371253"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Leadminthub",
+      "image": "https://www.leadminthub.com/assets/images/logo.png",
+      "@id": "https://www.leadminthub.com",
+      "url": "https://www.leadminthub.com",
+      "telephone": "+1-316-002-8288",
+      "email": "appointmentleadsminthub@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.8607,
+        "longitude": 67.0011
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "City",
+          "name": "Karachi"
+        },
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Lead Generation Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Leadminthub"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": ["United States", "Pakistan"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Lead Generation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Intent Lead Generation",
+              "description": "Target prospects actively searching for your solutions. We use advanced targeting and behavioral data to identify and capture leads with the highest purchase intent, ensuring maximum conversion rates."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Paid Campaign Management",
+              "description": "Expert management of your Google Ads, Facebook, and LinkedIn campaigns. We optimize every aspect from keyword selection to ad copy, continuously improving performance to lower your cost per lead."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conversion Funnel Optimization",
+              "description": "Transform visitors into customers with strategically designed funnels. We analyze user behavior, test landing pages, and refine the entire customer journey to maximize conversions at every touchpoint."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Leadminthub"
+      },
+      "ratingValue": "5",
+      "reviewCount": "4",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Leadminthub"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sarah Mitchell"
+      },
+      "reviewBody": "Leadminthub transformed our lead generation. We went from struggling to fill our pipeline to having qualified leads coming in daily. Our sales team is now closing deals we never would have reached before.",
+      "datePublished": "2024-01-15"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.leadminthub.com/#home"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.leadminthub.com/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reviews",
+          "item": "https://www.leadminthub.com/#testimonials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "FAQ",
+          "item": "https://www.leadminthub.com/#faq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact",
+          "item": "https://www.leadminthub.com/#contact"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are lead generation services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lead generation services help businesses identify and attract potential customers who are interested in their products or services. As a lead generation company, we use various strategies including paid advertising, content marketing, and data-driven targeting to find qualified leads that are most likely to convert into customers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does your lead generation company find qualified leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our lead generation agency uses advanced targeting techniques, behavioral data analysis, and multi-channel marketing strategies to identify prospects with high purchase intent. We leverage Google Ads, Facebook, LinkedIn, and other platforms to reach your target audience in the US and Karachi, Pakistan, ensuring we deliver qualified leads that match your ideal customer profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries do you serve with your lead generation services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our lead generation company works with businesses across various industries including technology, healthcare, finance, real estate, professional services, and B2B companies. We customize our lead generation strategies to match your specific industry needs and target market, whether you're operating in the United States or Karachi, Pakistan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly will I see results from your lead generation services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clients begin seeing qualified leads within 2-4 weeks of launching our lead generation campaigns. However, results vary based on your industry, target market, and campaign budget. Our lead generation agency provides transparent reporting so you can track progress and ROI in real-time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide lead generation services in Karachi, Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our lead generation company serves businesses in Karachi, Pakistan, as well as throughout the United States. We understand the local market dynamics in Karachi and can tailor our lead generation strategies to effectively reach your target audience in Pakistan while also supporting your US market expansion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes your lead generation agency different from others?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our lead generation company focuses on quality over quantity. We don't just generate leads—we generate qualified leads that are ready to buy. With our data-driven approach, conversion funnel optimization, and continuous campaign management, we ensure every lead has the highest potential to convert, maximizing your ROI and reducing your cost per acquisition."
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- GoDaddy Chat Widget -->
     <script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze-loader.js"></script>

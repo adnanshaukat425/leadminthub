@@ -108,6 +108,28 @@
 }
 
 /* ============================================
+   Skip to Content Link (Accessibility)
+   ============================================ */
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--md-primary);
+    color: var(--md-on-primary);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    position: fixed;
+}
+
+/* ============================================
    Reset and Base Styles
    ============================================ */
 
@@ -656,6 +678,68 @@ body {
     color: var(--md-primary);
     font-size: 0.875rem;
     letter-spacing: 0.1px;
+}
+
+/* ============================================
+   FAQ Section
+   ============================================ */
+
+.faq {
+    padding: var(--md-spacing-6) 0;
+    background-color: var(--md-background);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: var(--md-spacing-4) auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-spacing-2);
+}
+
+.faq-item {
+    background-color: var(--md-surface);
+    border-radius: 4px;
+    padding: var(--md-spacing-3);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow var(--md-duration-medium) var(--md-easing-standard),
+                opacity var(--md-duration-medium) var(--md-easing-decelerate),
+                transform var(--md-duration-medium) var(--md-easing-decelerate);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.faq-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-item:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--md-on-surface);
+    margin-bottom: var(--md-spacing-2);
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+.faq-answer {
+    color: var(--md-on-surface-medium);
+    line-height: 1.6;
+    font-size: 1rem;
+    letter-spacing: 0.15px;
+}
+
+.faq-answer p {
+    margin: 0;
 }
 
 /* ============================================
@@ -1290,8 +1374,21 @@ body {
 
     .services,
     .testimonials,
+    .faq,
     .contact {
         padding: var(--md-spacing-4) 0;
+    }
+    
+    .faq-list {
+        gap: var(--md-spacing-2);
+    }
+    
+    .faq-item {
+        padding: var(--md-spacing-2);
+    }
+    
+    .faq-question {
+        font-size: 1.1rem;
     }
 
     .service-card,

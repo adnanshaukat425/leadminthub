@@ -149,7 +149,11 @@
     }
     
     if (menuToggle) {
-        menuToggle.addEventListener('click', toggleDrawer);
+        menuToggle.addEventListener('click', function() {
+            toggleDrawer();
+            const isActive = nav.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+        });
     }
     
     // Close mobile menu when backdrop is clicked
@@ -278,6 +282,13 @@
         testimonialCards.forEach((card, index) => {
             observer.observe(card);
             card.style.transitionDelay = `${index * 100}ms`;
+        });
+        
+        // Observe FAQ items
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach((item, index) => {
+            observer.observe(item);
+            item.style.transitionDelay = `${index * 50}ms`;
         });
     }
     
