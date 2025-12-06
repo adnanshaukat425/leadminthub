@@ -7,7 +7,8 @@
     <meta name="description" content="Transform your business with proven lead generation strategies. Get qualified leads that convert into customers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,16 +36,25 @@
         </div>
     </header>
 
+    <!-- Navigation Drawer Backdrop -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Turn Your Marketing Budget Into a Revenue-Generating Machine</h1>
                 <p class="hero-subtitle">We specialize in delivering high-intent leads that convert. Our data-driven approach ensures every dollar you invest generates measurable ROI, filling your pipeline with qualified prospects ready to buy.</p>
-                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                <a href="#contact" class="mdc-button mdc-button--raised" data-ripple>
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">Get Started Today</span>
+                </a>
             </div>
         </div>
     </section>
+
+    <!-- Material Divider -->
+    <div class="mdc-divider"></div>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -52,35 +62,23 @@
             <h2 class="section-title">Our Lead Generation Services</h2>
             <p class="section-subtitle">Comprehensive solutions designed to scale your business and maximize your marketing ROI</p>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card mdc-card elevation-2" data-ripple>
                     <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <span class="material-icons">trending_up</span>
                     </div>
                     <h3 class="service-title">High-Intent Lead Generation</h3>
                     <p class="service-description">Target prospects actively searching for your solutions. We use advanced targeting and behavioral data to identify and capture leads with the highest purchase intent, ensuring maximum conversion rates.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card mdc-card elevation-2" data-ripple>
                     <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <span class="material-icons">campaign</span>
                     </div>
                     <h3 class="service-title">Paid Campaign Management</h3>
                     <p class="service-description">Expert management of your Google Ads, Facebook, and LinkedIn campaigns. We optimize every aspect from keyword selection to ad copy, continuously improving performance to lower your cost per lead.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card mdc-card elevation-2" data-ripple>
                     <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <span class="material-icons">analytics</span>
                     </div>
                     <h3 class="service-title">Conversion Funnel Optimization</h3>
                     <p class="service-description">Transform visitors into customers with strategically designed funnels. We analyze user behavior, test landing pages, and refine the entire customer journey to maximize conversions at every touchpoint.</p>
@@ -88,6 +86,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Material Divider -->
+    <div class="mdc-divider"></div>
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
@@ -97,84 +98,44 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
                     </div>
                     <p class="testimonial-text">"Leadminthub transformed our lead generation. We went from struggling to fill our pipeline to having qualified leads coming in daily. Our sales team is now closing deals we never would have reached before."</p>
                     <p class="testimonial-author">— Sarah Mitchell, CEO at TechFlow Solutions</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
                     </div>
                     <p class="testimonial-text">"The ROI has been incredible. Within three months, our cost per acquisition dropped by 40% while lead volume increased. Leadminthub's expertise in paid campaigns is unmatched."</p>
                     <p class="testimonial-author">— James Rodriguez, Marketing Director at Growth Partners</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
                     </div>
                     <p class="testimonial-text">"Working with Leadminthub was a game-changer. Their funnel optimization strategies helped us convert 3x more visitors into paying customers. Highly recommend their services."</p>
                     <p class="testimonial-author">— Emily Chen, Founder at Digital Innovations</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
                     </div>
                     <p class="testimonial-text">"Professional, results-driven, and always transparent. Leadminthub doesn't just generate leads—they generate the right leads. Our sales cycle shortened significantly after partnering with them."</p>
                     <p class="testimonial-author">— Michael Thompson, VP of Sales at Enterprise Solutions Inc.</p>
@@ -183,58 +144,51 @@
         </div>
     </section>
 
+    <!-- Material Divider -->
+    <div class="mdc-divider"></div>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Ready to Scale Your Business?</h2>
-            <p class="section-subtitle">Let's discuss how we can help you generate more qualified leads and grow your revenue. Fill out the form below and we'll get back to you within 24 hours.</p>
-            <div class="contact-info-section">
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <a href="tel:+13160028288" class="contact-link">+1 (316) 002-8288</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="22,6 12,13 2,6" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <a href="mailto:appointmentleadsminthub@gmail.com" class="contact-link">appointmentleadsminthub@gmail.com</a>
-                    </div>
+            <div class="contact-header">
+                <div class="contact-header-content">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-tagline">Let's talk about your next big move.</p>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lead-mint-hub-581371253" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6 9H2V21H6V9Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="contact-social-links">
+                    <a href="https://www.linkedin.com/in/lead-mint-hub-581371253" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn" data-ripple>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
                     </a>
-                    <a href="#" class="social-link" aria-label="Facebook" title="Coming soon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="#1959d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <a href="#" class="contact-social-link" aria-label="Facebook" title="Coming soon" data-ripple>
+                        <span class="material-icons">facebook</span>
                     </a>
                 </div>
             </div>
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your business and how we can help..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+            <div class="contact-form-section">
+                <h3 class="contact-form-title">Send us a message</h3>
+                <p class="contact-form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-field">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="mdc-button mdc-button--raised" data-ripple>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label">SEND MESSAGE</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -242,21 +196,55 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p></p>
-            <script>
-                // Dynamically set the current year
-                document.addEventListener("DOMContentLoaded", function() {
-                    const footer = document.querySelector('.footer .container');
-                    if (footer) {
-                        const yearPara = footer.querySelector('p');
-                        if (yearPara) {
-                            yearPara.innerHTML = `&copy; ${new Date().getFullYear()} Leadminthub. All rights reserved.`;
-                        }
-                    }
-                });
-            </script>
+            <div class="footer-content">
+                <div class="footer-contact-cards">
+                    <div class="footer-contact-card">
+                        <div class="footer-contact-icon">
+                            <span class="material-icons">phone</span>
+                        </div>
+                        <div class="footer-contact-info">
+                            <h4 class="footer-contact-title">Phone</h4>
+                            <a href="tel:+13160028288" class="footer-contact-link">+1 (316) 002-8288</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-card">
+                        <div class="footer-contact-icon">
+                            <span class="material-icons">email</span>
+                        </div>
+                        <div class="footer-contact-info">
+                            <h4 class="footer-contact-title">Email</h4>
+                            <a href="mailto:appointmentleadsminthub@gmail.com" class="footer-contact-link">appointmentleadsminthub@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-card">
+                        <div class="footer-contact-icon">
+                            <span class="material-icons">schedule</span>
+                        </div>
+                        <div class="footer-contact-info">
+                            <h4 class="footer-contact-title">Availability</h4>
+                            <p class="footer-contact-text">Mon-Fri, 9am-6pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">&copy; <script>document.write(new Date().getFullYear())</script> Leadminthub. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Action Button -->
+    <button class="mdc-fab" aria-label="Contact" data-ripple onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <span class="mdc-fab__ripple"></span>
+        <span class="material-icons mdc-fab__icon">mail</span>
+    </button>
+
+    <!-- Snackbar for form feedback -->
+    <div class="mdc-snackbar" id="snackbar">
+        <div class="mdc-snackbar__surface">
+            <div class="mdc-snackbar__label" role="status" aria-live="polite"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
