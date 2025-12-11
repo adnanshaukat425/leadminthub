@@ -43,7 +43,7 @@ This document provides instructions for completing the SEO setup for Leadminthub
 ### 1. Create Social Media Images
 - Create `assets/images/og-image.jpg` (1200x630px) for Open Graph
 - Create `assets/images/twitter-card.jpg` (1200x675px) for Twitter Cards
-- Create `assets/images/logo.png` for structured data
+- Create `assets/images/logo.jpeg` for structured data
 
 ### 2. Update Sitemap Dates
 - Update `lastmod` dates in `sitemap.xml` when you make content changes

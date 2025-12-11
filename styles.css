@@ -206,12 +206,26 @@ body {
 }
 
 .logo a {
+    display: flex;
+    align-items: center;
+    gap: var(--md-spacing-2);
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--md-primary);
     text-decoration: none;
     letter-spacing: 0.15px;
     transition: opacity var(--md-duration-short) var(--md-easing-standard);
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: inline-block;
 }
 
 .logo a:hover {
@@ -1426,6 +1440,14 @@ body {
 }
 
 @media (max-width: 599px) {
+    .logo-image {
+        height: 50px;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
     .menu-toggle {
         display: flex;
     }
