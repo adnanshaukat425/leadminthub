@@ -290,6 +290,139 @@
             observer.observe(item);
             item.style.transitionDelay = `${index * 50}ms`;
         });
+
+        // Observe generic reveal elements (hero panel, section headers, etc.)
+        const revealEls = document.querySelectorAll('.reveal');
+        revealEls.forEach((el, index) => {
+            observer.observe(el);
+            if (!el.style.transitionDelay) {
+                el.style.transitionDelay = `${index * 60}ms`;
+            }
+        });
+    }
+
+    // ============================================
+    // Testimonials Carousel (scroll-snap controls)
+    // ============================================
+
+    function initTestimonialsCarousel() {
+        const carousel = document.querySelector('[data-carousel]');
+        if (!carousel) return;
+
+        const track = carousel.querySelector('.testimonials-track');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+
+        if (!track || !prevBtn || !nextBtn) return;
+
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function getCardStep() {
+            const firstCard = track.querySelector('.testimonial-card');
+            if (!firstCard) return track.clientWidth;
+            const styles = window.getComputedStyle(track);
+            const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+            return firstCard.getBoundingClientRect().width + gap;
+        }
+
+        function updateButtons() {
+            const maxScrollLeft = track.scrollWidth - track.clientWidth;
+            prevBtn.disabled = track.scrollLeft <= 2;
+            nextBtn.disabled = track.scrollLeft >= maxScrollLeft - 2;
+        }
+
+        function scrollByStep(direction) {
+            track.scrollBy({
+                left: direction * getCardStep(),
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
+            });
+        }
+
+        prevBtn.addEventListener('click', () => scrollByStep(-1));
+        nextBtn.addEventListener('click', () => scrollByStep(1));
+
+        track.addEventListener('scroll', () => {
+            window.requestAnimationFrame(updateButtons);
+        }, { passive: true });
+
+        // Keyboard support when track is focused
+        track.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                scrollByStep(-1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                scrollByStep(1);
+            }
+        });
+
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+    }
+
+    // ============================================
+    // FAQ Accordion
+    // ============================================
+
+    function initFaqAccordion() {
+        const items = Array.from(document.querySelectorAll('.faq-item'));
+        if (!items.length) return;
+
+        const toggles = items
+            .map(item => ({ item, toggle: item.querySelector('.faq-toggle'), panel: item.querySelector('.faq-answer') }))
+            .filter(x => x.toggle && x.panel);
+
+        if (!toggles.length) return;
+
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function closeItem(x) {
+            x.item.classList.remove('open');
+            x.toggle.setAttribute('aria-expanded', 'false');
+            x.panel.style.maxHeight = '0px';
+
+            if (prefersReducedMotion) {
+                x.panel.hidden = true;
+                return;
+            }
+
+            // hide after transition to keep a11y tree clean
+            window.setTimeout(() => {
+                x.panel.hidden = true;
+            }, 250);
+        }
+
+        function openItem(x) {
+            // single-open behavior
+            toggles.forEach(other => {
+                if (other !== x && other.item.classList.contains('open')) closeItem(other);
+            });
+
+            x.panel.hidden = false;
+            x.item.classList.add('open');
+            x.toggle.setAttribute('aria-expanded', 'true');
+
+            const targetHeight = x.panel.scrollHeight;
+            x.panel.style.maxHeight = `${targetHeight}px`;
+        }
+
+        function toggleItem(x) {
+            const isOpen = x.item.classList.contains('open');
+            if (isOpen) closeItem(x);
+            else openItem(x);
+        }
+
+        toggles.forEach(x => {
+            x.toggle.addEventListener('click', () => toggleItem(x));
+        });
+
+        window.addEventListener('resize', () => {
+            toggles.forEach(x => {
+                if (x.item.classList.contains('open')) {
+                    x.panel.style.maxHeight = `${x.panel.scrollHeight}px`;
+                }
+            });
+        });
     }
     
     // ============================================
@@ -405,6 +538,8 @@
         initRipples();
         initTextFields();
         initScrollAnimations();
+        initTestimonialsCarousel();
+        initFaqAccordion();
         updateHeaderElevation();
         updateActiveNav();
     });
