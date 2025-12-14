@@ -1760,6 +1760,10 @@ body {
         font-size: 1.4rem;
     }
 
+    .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
