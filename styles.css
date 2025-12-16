@@ -239,6 +239,8 @@ body {
 
 .logo-text {
     display: inline-block;
+    font-family: cursive;
+    font-weight: 900;
 }
 
 .logo a:hover {
